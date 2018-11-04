@@ -15,7 +15,7 @@
     import ParticlesBG from "../components/Misc/ParticlesBG.vue"
 
     @Component({
-        components: {RegisterCard}
+        components: {RegisterCard, ParticlesBG}
     })
     export default class Register extends Vue {
 

@@ -1,5 +1,7 @@
 <template>
-    <div id="particles"></div>
+    <div id="particles">
+        <img src="../../assets/bg.jpg" alt="bg"/>
+    </div>
 </template>
 
 <script lang="ts">
@@ -12,5 +14,8 @@
 </script>
 
 <style lang="scss" scoped>
-
+    img {
+        min-width: 100%;
+        min-height: 100%;
+    }
 </style>

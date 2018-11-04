@@ -12,9 +12,10 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import ResetPasswordCard from "../components/Auth/ResetPasswordCard.vue"
+    import ParticlesBG from "../components/Misc/ParticlesBG.vue"
 
     @Component({
-        components: {ResetPasswordCard}
+        components: {ResetPasswordCard, ParticlesBG}
     })
     export default class ResetPassword extends Vue {
 

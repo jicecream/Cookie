@@ -27,4 +27,8 @@
         justify-content: center;
         align-items: center;
     }
+
+    #app {
+        background-color: #F0F0F7;
+    }
 </style>
