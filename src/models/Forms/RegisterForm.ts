@@ -1,7 +1,4 @@
-enum Gender {
-    MALE = 0,
-    FEMALE = 1
-}
+import {Gender} from "@/models/User"
 
 export class RegisterForm {
     username: string

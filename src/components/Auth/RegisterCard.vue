@@ -105,13 +105,6 @@
             router.push('/')
         }
 
-        // we spent 30 mins on this
-        // get checkName(){
-        //     return this.name.length > 0 || this.name.length == 0
-        // }
-        // get checkUsername(){
-        //     return this.username.length > 0 || this.username.length == 0
-        // }
         get checkEmail() {
             return RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(this.email)
                 || this.email.length == 0

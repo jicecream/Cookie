@@ -42,6 +42,7 @@
     import {AuthService} from "../../api/AuthService"
     import {LoginForm} from "../../models/Forms/LoginForm"
     import router from "../../router";
+    import {processLogin} from "../../utils/auth/AuthProcessor";
 
     @Component
     export default class LoginCard extends Vue {
@@ -53,7 +54,10 @@
 
             AuthService
                 .login(loginForm)
-                .then(res => console.log(res.data))
+                .then(res => {
+                    processLogin(res.data)
+                    router.push(`dashboard`)
+                })
                 .catch(e => console.log(e))
         }
 
