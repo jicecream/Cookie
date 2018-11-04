@@ -15,7 +15,7 @@
     import ParticlesBG from "../components/Misc/ParticlesBG.vue"
 
     @Component({
-        components: {LoginCard}
+        components: {LoginCard, ParticlesBG}
     })
 
     export default class Login extends Vue {
