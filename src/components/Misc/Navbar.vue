@@ -1,22 +1,22 @@
 <template>
     <div id="navbar">
         <div class="menu">
-            <div class="menu-label title is-4">KONTOROL</div>
+            <div class="menu-label title is-4 white">KONTOROL</div>
             <ul class="menu-list">
                 <li>
-                    <span class="icon is-left">
+                    <div class="icon is-left">
                         <i class="fa fa-key"></i>
-                    </span>
-                    <router-link to="/dashboard">Overview</router-link>
+                    </div>
+                    <router-link to="/dashboard" class="white">Overview</router-link>
                 </li>
                 <li>
-                    <router-link to="/ManageDevices">Manage Devices</router-link>
+                    <router-link to="/ManageDevices" class="white">Manage Devices</router-link>
                 </li>
                 <li>
-                    <router-link to="/training">Training</router-link>
+                    <router-link to="/training" class="white">Training</router-link>
                 </li>
                 <li>
-                    <router-link to="/">Logout</router-link>
+                    <router-link to="/" class="white">Logout</router-link>
                 </li>
             </ul>
         </div>
@@ -39,6 +39,15 @@
         position: fixed;
         overflow-x: hidden;
         height: 100%;
+        width: 15%;
         background-color: #43425D;
+    }
+
+    .white {
+        color: white;
+    }
+
+    .menu {
+        color: white;
     }
 </style>
