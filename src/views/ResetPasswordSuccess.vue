@@ -17,9 +17,10 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import router from "../router";
+    import ParticlesBG from "../components/Misc/ParticlesBG.vue"
 
     @Component({
-
+        components: {ParticlesBG}
     })
     export default class ResetPasswordSuccess extends Vue {
         back(){

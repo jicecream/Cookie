@@ -4,7 +4,7 @@
         <router-link to="/ManageDevices">Manage Devices</router-link>
         <router-link to="/training">Training</router-link>
         <router-link to="/settings">Settings</router-link>
-        <router-link to="/login">Logout</router-link>
+        <router-link to="/">Logout</router-link>
     </div>
 </template>
 
