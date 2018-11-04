@@ -6,7 +6,7 @@ export class RegisterForm {
     retypePassword: string
     name: string
     email: string
-    gender: Gender
+    gender: number
     age: number
 
     constructor(username: string,
@@ -14,7 +14,7 @@ export class RegisterForm {
                 retypePassword: string,
                 name: string,
                 email: string,
-                gender: Gender,
+                gender: number,
                 age: number) {
         this.username = username
         this.password = password

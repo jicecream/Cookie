@@ -56,7 +56,7 @@
                 <div class="field">
                     <label class="label">Age: </label>
                     <div class="control has-icons-left">
-                        <input class="input restrict" type="text" placeholder="Age" v-model="age">
+                        <input class="input restrict" type="number" placeholder="Age" v-model="age">
                         <span class="icon is-left">
                         <i class="fa fa-birthday-cake"></i>
                     </span>
@@ -66,10 +66,10 @@
                     <label class="label">Gender: </label>
                     <div class="control">
                         <label class="radio">
-                            <input type="radio" name="gender"> Male
+                            <input type="radio" name="gender" value="0" v-model="gender"> Male
                         </label>
                         <label class="radio">
-                            <input type="radio" name="gender"> Female
+                            <input type="radio" name="gender" value="1" v-model="gender"> Female
                         </label>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
             <br>
             <div class="mid">
                 <button @click="back" class="button">Cancel</button>
-                <button class="button is-primary">Sign Up</button>
+                <button class="button is-primary" @click="register">Sign Up</button>
             </div>
             <br>
             <div class="mid">
@@ -90,6 +90,10 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import router from "../../router";
+    import {AuthService} from "../../api/AuthService";
+    import {RegisterForm} from '../../models/Forms/RegisterForm';
+    import {Gender} from "../../models/User";
+    import {processRegister} from "../../utils/auth/AuthProcessor";
 
     @Component
     export default class RegisterCard extends Vue {
@@ -98,11 +102,30 @@
         username: string = ``
         userPassword: string = ``
         confirmPassword: string = ``
-        age: string = ``
-        gender: string = ``
+        age: string = `0`
+        gender: string = `0`
 
         back() {
             router.push('/')
+        }
+
+        register() {
+            AuthService.register(this.genRegisterForm)
+                .then(res => {
+                    processRegister(res.data)
+                    router.push('/')
+                })
+                .catch(e => console.log(e))
+        }
+
+        get genRegisterForm() {
+            return new RegisterForm(this.username,
+                this.userPassword,
+                this.confirmPassword,
+                this.name,
+                this.email,
+                parseInt(this.gender),
+                parseInt(this.age))
         }
 
         get checkEmail() {

@@ -18,11 +18,10 @@
                 <div class="control has-icons-left">
                     <input class="input" type="password" placeholder="Password" v-model="password">
                     <span class="icon is-left">
-                    <i class="fa fa-key"></i>
-                </span>
+                        <i class="fa fa-key"></i>
+                    </span>
                 </div>
             </div>
-            <!--<p v-if="!isValid">Fields unfilled</p>-->
             <div class="right">
                 <router-link to="/resetpassword">Forgot Password</router-link>
             </div>
@@ -41,8 +40,8 @@
     import {Component, Vue} from 'vue-property-decorator'
     import {AuthService} from "../../api/AuthService"
     import {LoginForm} from "../../models/Forms/LoginForm"
-    import router from "../../router";
-    import {processLogin} from "../../utils/auth/AuthProcessor";
+    import router from "../../router"
+    import {processLogin} from "../../utils/auth/AuthProcessor"
 
     @Component
     export default class LoginCard extends Vue {

@@ -11,7 +11,7 @@ function login(loginForm: LoginForm) {
 }
 
 function register(registerForm: RegisterForm) {
-    return axios.post(`${route}/login`, JSON.parse(JSON.stringify(registerForm)))
+    return axios.post(`${route}/register`, JSON.parse(JSON.stringify(registerForm)))
 }
 
 export const AuthService = {
