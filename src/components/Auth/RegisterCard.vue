@@ -49,7 +49,7 @@
                     </span>
                     <p class="help" v-if="!checkPassword">Password does not match</p> <!--//this wants false to render okokokokokokokokokokokokok
                     okokokokkokokokokokokokokokokokokokokok
-                    its 6am what if u see this, congrats you actually do work-->
+                    its 6am what-->
                 </div>
             </div>
             <div class="field is-horizontal">
@@ -113,7 +113,7 @@
             AuthService.register(this.genRegisterForm)
                 .then(res => {
                     processRegister(res.data)
-                    router.push('/')
+                    router.push('/registersuccess')
                 })
                 .catch(e => console.log(e))
         }

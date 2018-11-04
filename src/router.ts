@@ -4,6 +4,7 @@ import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import ResetPassword from './views/ResetPassword.vue'
 import ResetPasswordSuccess from './views/ResetPasswordSuccess.vue'
+import RegisterSuccess from './views/RegisterSuccess.vue'
 import Dashboard from './views/Dashboard.vue'
 import ManageDevices from './views/ManageDevices.vue'
 import Training from './views/Training.vue'
@@ -36,6 +37,11 @@ export default new Router({
             path: '/resetpasswordsuccess',
             name: 'ResetPasswordSuccess',
             component: ResetPasswordSuccess
+        },
+        {
+            path: '/registersuccess',
+            name: 'RegisterSuccess',
+            component: RegisterSuccess
         },
         {
             path: '/dashboard',

@@ -1,10 +1,16 @@
 <template>
-
+    <div class="dashboard">
+        <Navbar></Navbar>
+    </div>
 </template>
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
-    @Component({})
+    import Navbar from "../components/Misc/Navbar.vue";
+
+    @Component({
+        components: {Navbar}
+    })
     export default class Dashboard extends Vue {
 
     }

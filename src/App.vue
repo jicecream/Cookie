@@ -30,5 +30,6 @@
 
     #app {
         background-color: #F0F0F7;
+        min-height: 100%
     }
 </style>
