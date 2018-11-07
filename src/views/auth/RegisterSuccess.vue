@@ -1,10 +1,10 @@
 <template>
-    <div class="resetPasswordSuccess">
+    <div class="registerSuccess">
         <div class="columns page">
-            <ParticlesBG class="column is-half"></ParticlesBG>
+            <ParticlesBG class="column is-half is-paddingless"></ParticlesBG>
             <div class="kms">
-                <h1 class="title is-2 mid">Reset Password Success!</h1>
-                <h3 class="subtitle mid">Password was successfully reset! Please login again.</h3>
+                <h1 class="title is-2 mid">Registration Success!</h1>
+                <h3 class="subtitle mid">Welcome! Please login to your new account.</h3>
                 <br><br><br><br><br><br><br><br><br>
                 <div class="mid">
                     <button @click="back" class="button is-primary is-fullwidth">Return to Login</button>
@@ -16,17 +16,16 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import router from "../router";
-    import ParticlesBG from "../components/Misc/ParticlesBG.vue"
+    import ParticlesBG from "../../components/Misc/ParticlesBG.vue";
+    import router from "../../router";
 
     @Component({
         components: {ParticlesBG}
     })
-    export default class ResetPasswordSuccess extends Vue {
-        back(){
+    export default class RegisterSuccess extends Vue {
+        back() {
             router.push('/')
         }
-
     }
 </script>
 
@@ -34,6 +33,7 @@
     .mid {
         text-align: center;
     }
+
     .kms {
         align-self: center;
         max-width: 50%;

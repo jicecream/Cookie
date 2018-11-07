@@ -1,14 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from './views/Login.vue'
-import Register from './views/Register.vue'
-import ResetPassword from './views/ResetPassword.vue'
-import ResetPasswordSuccess from './views/ResetPasswordSuccess.vue'
-import RegisterSuccess from './views/RegisterSuccess.vue'
-import Dashboard from './views/Dashboard.vue'
-import ManageDevices from './views/ManageDevices.vue'
-import Training from './views/Training.vue'
-import Settings from './views/Settings.vue'
+import Login from './views/auth/Login.vue'
+import Register from './views/auth/Register.vue'
+import ResetPassword from './views/auth/ResetPassword.vue'
+import ResetPasswordSuccess from './views/auth/ResetPasswordSuccess.vue'
+import RegisterSuccess from './views/auth/RegisterSuccess.vue'
+import Dashboard from './views/main/Dashboard.vue'
+import ManageDevices from './views/main/ManageDevices.vue'
+import Training from './views/main/Training.vue'
+import Settings from './views/main/Settings.vue'
 
 Vue.use(Router)
 

@@ -1,7 +1,7 @@
 <template>
     <div class="resetPassword">
         <div class="columns page">
-            <ParticlesBG class="column is-half"></ParticlesBG>
+            <ParticlesBG class="column is-half is-paddingless"></ParticlesBG>
             <div class="kms">
                 <ResetPasswordCard class="column"></ResetPasswordCard>
             </div>
@@ -11,8 +11,8 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import ResetPasswordCard from "../components/Auth/ResetPasswordCard.vue"
-    import ParticlesBG from "../components/Misc/ParticlesBG.vue"
+    import ResetPasswordCard from "../../components/Auth/ResetPasswordCard.vue"
+    import ParticlesBG from "../../components/Misc/ParticlesBG.vue"
 
     @Component({
         components: {ResetPasswordCard, ParticlesBG}

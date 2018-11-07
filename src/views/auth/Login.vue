@@ -1,7 +1,7 @@
 <template>
     <div id="login">
         <div class="columns page">
-            <ParticlesBG class="column is-half"></ParticlesBG>
+            <ParticlesBG class="column is-half is-paddingless"></ParticlesBG>
             <div class="kms">
                 <LoginCard class="column"></LoginCard>
             </div>
@@ -11,8 +11,8 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator'
-    import LoginCard from "../components/Auth/LoginCard.vue"
-    import ParticlesBG from "../components/Misc/ParticlesBG.vue"
+    import LoginCard from "../../components/Auth/LoginCard.vue"
+    import ParticlesBG from "../../components/Misc/ParticlesBG.vue"
 
     @Component({
         components: {LoginCard, ParticlesBG}

@@ -1,17 +1,17 @@
 <template>
-    <div class="manageDevices">
+    <div class="training">
         <Navbar></Navbar>
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import Navbar from "../components/Misc/Navbar.vue";
+    import Navbar from "../../components/Misc/Navbar.vue";
 
     @Component({
         components: {Navbar}
     })
-    export default class ManageDevices extends Vue {
+    export default class Training extends Vue {
 
     }
 </script>

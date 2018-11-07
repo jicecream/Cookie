@@ -1,7 +1,7 @@
 <template>
     <div id="navbar">
         <div class="menu">
-            <div class="menu-label title is-4 white">KONTOROL</div>
+            <div class="menu-label title is-4 white" style="padding: 3%">KONTOROL</div>
             <ul class="menu-list">
                 <li>
                     <div class="icon is-left">
@@ -14,6 +14,9 @@
                 </li>
                 <li>
                     <router-link to="/training" class="white">Training</router-link>
+                </li>
+                <li>
+                    <router-link to="/settings" class="white">Settings</router-link>
                 </li>
                 <li>
                     <router-link to="/" class="white">Logout</router-link>

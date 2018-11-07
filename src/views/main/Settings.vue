@@ -7,8 +7,8 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import Navbar from "../components/Misc/Navbar.vue";
-    import ChangePasswordCard from "../components/Auth/ChangePasswordCard.vue"
+    import Navbar from "../../components/Misc/Navbar.vue";
+    import ChangePasswordCard from "../../components/Auth/ChangePasswordCard.vue"
 
     @Component({
         components: {Navbar, ChangePasswordCard}

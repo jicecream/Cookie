@@ -1,7 +1,7 @@
 <template>
     <div class="register page">
         <div class="columns page">
-            <ParticlesBG class="column is-half"></ParticlesBG>
+            <ParticlesBG class="column is-half is-paddingless"></ParticlesBG>
             <div class="kms">
                 <RegisterCard class="column"></RegisterCard>
             </div>
@@ -11,8 +11,8 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator'
-    import RegisterCard from "../components/Auth/RegisterCard.vue"
-    import ParticlesBG from "../components/Misc/ParticlesBG.vue"
+    import RegisterCard from "../../components/Auth/RegisterCard.vue"
+    import ParticlesBG from "../../components/Misc/ParticlesBG.vue"
 
     @Component({
         components: {RegisterCard, ParticlesBG}
