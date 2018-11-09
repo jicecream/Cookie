@@ -1,9 +1,15 @@
 <template>
     <div id="login">
         <div class="columns page">
-            <ParticlesBG class="column is-half is-paddingless"></ParticlesBG>
+            <div class="column is-half is-paddingless">
+                <ParticlesBG></ParticlesBG>
+            </div>
+
             <div class="kms">
-                <LoginCard class="column"></LoginCard>
+                <div class="column">
+                    <LoginCard></LoginCard>
+                </div>
+
             </div>
         </div>
     </div>
@@ -25,6 +31,11 @@
 </script>
 
 <style scoped lang="scss">
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+
     .kms {
         align-self: center;
         max-width: 50%;

@@ -1,12 +1,20 @@
 <template>
     <div class="manageDevices">
-        <Navbar></Navbar>
+        <div class="columns">
+            <div class="column is-one-fifth">
+                <Navbar></Navbar>
+            </div>
+            <div class="column">
+
+            </div>
+
+        </div>
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import Navbar from "../../components/Misc/Navbar.vue";
+    import Navbar from '../.././components/Misc/Navbar.vue'
 
     @Component({
         components: {Navbar}

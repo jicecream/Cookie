@@ -1,21 +1,21 @@
 <template>
     <div class="dashboard">
-        <div class="columns">
+        <div class="columns is-paddingless">
             <div class="column is-one-fifth">
                 <Navbar></Navbar>
             </div>
-            <div class="column">
-                <DashboardCard></DashboardCard>
+            <div class="column dashboard">
+                <div class="padding">
+                    <DashboardCard></DashboardCard>
+                </div>
             </div>
-
         </div>
-
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator'
-    import Navbar from '../../components/Misc/Navbar.vue'
+    import Navbar from '../.././components/Misc/Navbar.vue'
     import DashboardCard from '../../components/Misc/DashboardCard.vue'
 
     @Component({
@@ -32,11 +32,11 @@
         padding: 0;
     }
 
-    .background {
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        z-index: 0;
+    .dashboard {
+
+    }
+
+    .padding {
+        padding: 1vw;
     }
 </style>

@@ -76,6 +76,10 @@
 </script>
 
 <style scoped lang="scss">
+    .loginCard {
+        height: 100vh;
+    }
+
     .mid {
         text-align: center;
     }

@@ -1,17 +1,23 @@
 <template>
     <div class="settings">
-        <Navbar></Navbar>
-        <ChangePasswordCard></ChangePasswordCard>
+        <div class="columns">
+            <div class="column is-one-fifth">
+                <Navbar></Navbar>
+            </div>
+            <div class="column">
+                <ChangePasswordCard></ChangePasswordCard>
+            </div>
+        </div>
     </div>
 </template>
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import Navbar from "../../components/Misc/Navbar.vue";
     import ChangePasswordCard from "../../components/Auth/ChangePasswordCard.vue"
+    import Navbar from '../.././components/Misc/Navbar.vue'
 
     @Component({
-        components: {Navbar, ChangePasswordCard}
+        components: {ChangePasswordCard, Navbar}
     })
     export default class Settings extends Vue {
 

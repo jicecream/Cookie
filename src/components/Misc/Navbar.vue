@@ -7,7 +7,7 @@
                     <div class="icon is-left">
                         <i class="fa fa-key"></i>
                     </div>
-                    <router-link to="/dashboard" class="white">Overview</router-link>
+                    <router-link to="/dashboard" class="white is-active">Overview</router-link>
                 </li>
                 <li>
                     <router-link to="/ManageDevices" class="white">Manage Devices</router-link>
@@ -42,8 +42,8 @@
         position: fixed;
         overflow-x: hidden;
         height: 100%;
-        width: 15%;
         background-color: #43425D;
+        min-width: 20vw;
     }
 
     .white {
