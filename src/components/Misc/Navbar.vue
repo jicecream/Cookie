@@ -1,25 +1,37 @@
 <template>
     <div id="navbar">
         <div class="menu">
-            <div class="menu-label title is-4 white" style="padding: 3%">KONTOROL</div>
+            <div class="menu-label white header">KONTOROL</div>
             <ul class="menu-list">
                 <li>
-                    <div class="icon is-left">
-                        <i class="fa fa-key"></i>
-                    </div>
-                    <router-link to="/dashboard" class="white is-active">Overview</router-link>
+                    <router-link to="/dashboard" class="white">
+                        <i class="icon is-left fa fa-key"></i>
+                        Overview
+                    </router-link>
                 </li>
                 <li>
-                    <router-link to="/ManageDevices" class="white">Manage Devices</router-link>
+                    <router-link to="/ManageDevices" class="white">
+                        <i class="icon is-left fas fa-mobile"></i>
+                        Manage Devices
+                    </router-link>
                 </li>
                 <li>
-                    <router-link to="/training" class="white">Training</router-link>
+                    <router-link to="/training" class="white">
+                        <i class="icon is-left fas fa-chalkboard-teacher"></i>
+                        Training
+                    </router-link>
                 </li>
                 <li>
-                    <router-link to="/settings" class="white">Settings</router-link>
+                    <router-link to="/settings" class="white">
+                        <i class="icon is-left fa fa-cog"></i>
+                        Settings
+                    </router-link>
                 </li>
                 <li>
-                    <router-link to="/" class="white">Logout</router-link>
+                    <router-link to="/" class="white">
+                        <i class="icon is-left fas fa-sign-out-alt"></i>
+                        Logout
+                    </router-link>
                 </li>
             </ul>
         </div>
@@ -44,6 +56,12 @@
         height: 100%;
         background-color: #43425D;
         min-width: 20vw;
+    }
+
+    .header {
+        font-size: 23px;
+        padding: 3% 3% 3% 5%;
+
     }
 
     .white {
