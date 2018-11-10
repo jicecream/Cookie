@@ -5,7 +5,7 @@
                 <Navbar></Navbar>
             </div>
             <div class="column">
-
+                <ManageDevicesCard></ManageDevicesCard>
             </div>
 
         </div>
@@ -15,9 +15,10 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import Navbar from '../.././components/Misc/Navbar.vue'
+    import ManageDevicesCard from "../../components/Misc/ManageDevicesCard";
 
     @Component({
-        components: {Navbar}
+        components: {ManageDevicesCard, Navbar}
     })
     export default class ManageDevices extends Vue {
 

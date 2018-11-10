@@ -5,7 +5,7 @@
                 <Navbar></Navbar>
             </div>
             <div class="column">
-                <ChangePasswordCard></ChangePasswordCard>
+                <TrainingCard></TrainingCard>
             </div>
         </div>
     </div>
