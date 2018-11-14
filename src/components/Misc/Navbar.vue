@@ -5,7 +5,7 @@
             <ul class="menu-list">
                 <li>
                     <router-link to="/dashboard" class="white">
-                        <i class="icon is-left fa fa-key"></i>
+                        <i class="icon is-left fas fa-key"></i>
                         Overview
                     </router-link>
                 </li>
@@ -23,7 +23,7 @@
                 </li>
                 <li>
                     <router-link to="/settings" class="white">
-                        <i class="icon is-left fa fa-cog"></i>
+                        <i class="icon is-left fas fa-cog"></i>
                         Settings
                     </router-link>
                 </li>
