@@ -1,10 +1,9 @@
-function nowEpochMillis() {
-    return Date.now()
-}
+import {nowEpochMillis} from "@/utils/misc/Misc"
 
 export class IotCategory {
     LIGHTS = "Lights"
 }
+
 
 export class Iot {
     iotId: number
@@ -18,7 +17,7 @@ export class Iot {
     createdAt: number
     deletedAt: number | null
 
-    constructor(iotId: number,
+    constructor(iotId: number = 0,
                 iotIP: string,
                 name: string,
                 category: IotCategory,
