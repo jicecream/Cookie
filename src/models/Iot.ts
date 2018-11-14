@@ -17,6 +17,11 @@ export class Iot {
     createdAt: number
     deletedAt: number | null
 
+    static fromJSON(json: object): Iot {
+        //@ts-ignore
+        return Object.assign(new Iot, json)
+    }
+
     constructor(iotId: number = 0,
                 iotIP: string,
                 name: string,

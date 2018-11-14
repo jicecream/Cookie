@@ -7,7 +7,7 @@ const route = `iot`
 
 function config() {
     return {
-        'headers': {'Authorization': localStorage.getItem('token')}
+        'headers': {'Authorization': `Bearer ${localStorage.getItem('token')}`}
     }
 }
 
@@ -29,4 +29,12 @@ function updateIot(iot: Iot) {
 
 function deleteIot(id: number) {
     return axios.delete(`/${route}/${id}`, config())
+}
+
+export const IotService = {
+    getIots,
+    getIotById,
+    createIot,
+    updateIot,
+    deleteIot
 }

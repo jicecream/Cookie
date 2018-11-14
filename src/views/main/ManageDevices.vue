@@ -1,10 +1,10 @@
 <template>
-    <div class="manageDevices">
+    <div class="manageDevices page">
         <div class="columns">
             <div class="column is-one-fifth">
                 <Navbar></Navbar>
             </div>
-            <div class="column">
+            <div class="column padding">
                 <ManageDevicesCard></ManageDevicesCard>
             </div>
 
@@ -15,7 +15,7 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import Navbar from '../.././components/Misc/Navbar.vue'
-    import ManageDevicesCard from "../../components/Misc/ManageDevicesCard";
+    import ManageDevicesCard from "../../components/Misc/ManageDevicesCard.vue";
 
     @Component({
         components: {ManageDevicesCard, Navbar}
@@ -26,5 +26,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .padding {
+        padding: 1vw;
+    }
 </style>
