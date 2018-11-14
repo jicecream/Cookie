@@ -15,7 +15,7 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import Navbar from '../.././components/Misc/Navbar.vue'
-    import ManageDevicesCard from "../../components/Misc/ManageDevicesCard.vue";
+    import ManageDevicesCard from "../../components/ManageDevices/ManageDevicesCard.vue";
 
     @Component({
         components: {ManageDevicesCard, Navbar}

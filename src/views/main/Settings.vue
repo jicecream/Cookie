@@ -5,7 +5,7 @@
                 <Navbar></Navbar>
             </div>
             <div class="column">
-                <ChangePasswordCard></ChangePasswordCard>
+                <ChangePasswordForm></ChangePasswordForm>
             </div>
         </div>
     </div>
@@ -13,11 +13,12 @@
 
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
-    import ChangePasswordCard from "../../components/Auth/ChangePasswordCard.vue"
     import Navbar from '../.././components/Misc/Navbar.vue'
+    import ChangePasswordCard from "../../components/Settings/ChangePasswordCard.vue";
+    import ChangePasswordForm from '../../components/Auth/ChangePasswordForm.vue'
 
     @Component({
-        components: {ChangePasswordCard, Navbar}
+        components: {ChangePasswordForm, Navbar}
     })
     export default class Settings extends Vue {
 

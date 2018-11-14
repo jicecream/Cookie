@@ -10,7 +10,7 @@
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import {IotService} from "../../api/IotService";
     import {Iot} from '../../models/Iot';
-    import IotCard from "../ManageDevices/IotCard.vue";
+    import IotCard from "./IotCard.vue";
     @Component({
         components: {IotCard}
     })
@@ -27,5 +27,11 @@
 </script>
 
 <style lang="scss" scoped>
+    .manageDevicesCard {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+        padding: 2vh;
+    }
 
 </style>

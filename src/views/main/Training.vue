@@ -14,9 +14,10 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator';
     import Navbar from '../.././components/Misc/Navbar.vue'
+    import TrainingCard from '../.././components/Misc/TrainingCard.vue'
 
     @Component({
-        components: {Navbar}
+        components: {Navbar, TrainingCard}
     })
     export default class Training extends Vue {
 
