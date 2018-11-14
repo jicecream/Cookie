@@ -1,5 +1,7 @@
 <template>
-
+    <div class="manageDevicesCard">
+        <!--This contains table with name, category, location, description, toggable button, trash icon-->
+    </div>
 </template>
 
 <script lang="ts">

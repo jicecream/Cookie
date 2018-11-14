@@ -1,6 +1,6 @@
 <template>
-    <div class="trainingCard">
-        <!--training should include gender,age,command dropdown,location,device,channel-->
+    <div class="particlesJS">
+        <!--content goes here-->
     </div>
 </template>
 
@@ -8,11 +8,11 @@
     import {Component, Prop, Vue} from 'vue-property-decorator';
 
     @Component
-    export default class TrainingCard extends Vue {
+    export default class ParticlesJS extends Vue {
 
     }
 </script>
 
 <style lang="scss" scoped>
-
+    /*css for the particlesjs goes here*/
 </style>
