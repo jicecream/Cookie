@@ -3,35 +3,15 @@
         <div class="menu">
             <div class="menu-label white header">KONTOROL</div>
             <ul class="menu-list">
-                <li>
-                    <router-link to="/dashboard" class="white">
-                        <i class="icon is-left fas fa-key"></i>
-                        Overview
+                <li v-for="link in links">
+                    <router-link to="link.to" class="white">
+                        <i class="icon is-left" :class="link.icons"></i> {{link.str}}
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="/ManageDevices" class="white">
-                        <i class="icon is-left fas fa-mobile"></i>
-                        Manage Devices
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/training" class="white">
-                        <i class="icon is-left fas fa-chalkboard-teacher"></i>
-                        Training
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/settings" class="white">
-                        <i class="icon is-left fas fa-cog"></i>
-                        Settings
-                    </router-link>
-                </li>
-                <li>
-                    <router-link to="/" class="white">
-                        <i class="icon is-left fas fa-sign-out-alt"></i>
-                        Logout
-                    </router-link>
+                    <a @click="logout" class="white">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </a>
                 </li>
             </ul>
         </div>
@@ -40,10 +20,24 @@
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator'
+    import router from "../../router"
 
-    @Component
+    @Component({})
     export default class Navbar extends Vue {
 
+        links = [
+            {to: '/dashboard', icons: 'fas fa-key', str: 'Overview'},
+            {to: '/manageDevices', icons: 'fas fa-mobile', str: 'Manage Devices'},
+            {to: '/training', icons: 'fas fa-chalkboard-teacher', str: 'Training'},
+            {to: '/settings', icons: 'fas fa-cog', str: 'Settings'},
+        ]
+
+        created() {}
+
+        logout() {
+            localStorage.clear()
+            this.$router.push('/')
+        }
     }
 </script>
 

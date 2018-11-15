@@ -1,24 +1,26 @@
 <template>
     <div class="manageDevices page">
-        <div class="columns">
+        <div class="columns is-paddingless">
             <div class="column is-one-fifth">
-                <Navbar></Navbar>
+                <navbar></navbar>
             </div>
             <div class="column padding">
                 <ManageDevicesCard></ManageDevicesCard>
             </div>
-
         </div>
     </div>
+
+
 </template>
 
 <script lang="ts">
-    import {Component, Prop, Vue} from 'vue-property-decorator';
-    import Navbar from '../.././components/Misc/Navbar.vue'
-    import ManageDevicesCard from "../../components/Misc/ManageDevicesCard.vue";
+    import {Component, Prop, Vue} from 'vue-property-decorator'
+
+    import ManageDevicesCard from "../../components/Misc/ManageDevicesCard.vue"
+    import Navbar from "../../components/Misc/Navbar.vue";
 
     @Component({
-        components: {ManageDevicesCard, Navbar}
+        components: {Navbar, ManageDevicesCard}
     })
     export default class ManageDevices extends Vue {
 
