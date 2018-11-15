@@ -7,20 +7,18 @@
             <div class="column padding">
                 <ManageDevicesCard></ManageDevicesCard>
             </div>
+
         </div>
     </div>
-
-
 </template>
 
 <script lang="ts">
-    import {Component, Prop, Vue} from 'vue-property-decorator'
-
-    import ManageDevicesCard from "../../components/Misc/ManageDevicesCard.vue"
-    import Navbar from "../../components/Misc/Navbar.vue";
+    import {Component, Prop, Vue} from 'vue-property-decorator';
+    import Navbar from '../.././components/Misc/Navbar.vue'
+    import ManageDevicesCard from "../../components/ManageDevices/ManageDevicesCard.vue";
 
     @Component({
-        components: {Navbar, ManageDevicesCard}
+        components: {ManageDevicesCard, Navbar}
     })
     export default class ManageDevices extends Vue {
 
