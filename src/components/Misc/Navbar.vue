@@ -4,9 +4,9 @@
             <div class="menu-label white header">KONTOROL</div>
             <ul class="menu-list">
                 <li v-for="link in links">
-                    <router-link to="link.to" class="white">
+                    <a @click="navigate(link.to)" class="white">
                         <i class="icon is-left" :class="link.icons"></i> {{link.str}}
-                    </router-link>
+                    </a>
                 </li>
                 <li>
                     <a @click="logout" class="white">
@@ -33,6 +33,10 @@
         ]
 
         created() {}
+
+        navigate(link: string) {
+            this.$router.push(link)
+        }
 
         logout() {
             localStorage.clear()
