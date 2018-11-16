@@ -1,5 +1,5 @@
 import axios from "axios"
-import {Iot} from "@/models/Iot"
+import {IotForm} from "@/models/Forms/IotForm"
 
 axios.defaults.baseURL = `http://localhost:8080/api/v1`
 
@@ -19,11 +19,11 @@ function getIotById(id: number) {
     return axios.get(`/${route}`, config())
 }
 
-function createIot(iot: Iot) {
+function createIot(iot: IotForm) {
     return axios.post(`/${route}`, JSON.parse(JSON.stringify(iot)), config())
 }
 
-function updateIot(iot: Iot) {
+function updateIot(iot: IotForm) {
     return axios.put(`/${route}`, JSON.parse(JSON.stringify(iot)), config())
 }
 

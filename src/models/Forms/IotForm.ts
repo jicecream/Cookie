@@ -41,6 +41,4 @@ export class IotForm {
             userId
         )
     }
-
-
 }
