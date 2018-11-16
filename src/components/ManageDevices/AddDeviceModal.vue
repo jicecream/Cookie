@@ -13,26 +13,26 @@
                                 <div class="control has-icons-left">
                                     <input class="input" type="text" placeholder="Name" v-model="name">
                                     <span class="icon is-left">
-                        <i class="fa fa-user"></i>
-                    </span>
+                                        <i class="fa fa-user"></i>
+                                    </span>
                                 </div>
                             </div>
                             <div class="field">
                                 <label class="label">Command: </label>
                                 <span class="select">
-                        <select v-model="command">
-                            <option>Lights</option>
-                            <option>Door</option>
-                        </select>
-                    </span>
+                                    <select v-model="command">
+                                        <option>Lights</option>
+                                        <option>Door</option>
+                                    </select>
+                                </span>
                             </div>
                             <div class="field">
                                 <label class="label">Location: </label>
                                 <div class="control has-icons-left">
                                     <input class="input" type="text" placeholder="Name" v-model="location">
                                     <span class="icon is-left">
-                        <i class="fa fa-user"></i>
-                    </span>
+                                        <i class="fa fa-user"></i>
+                                    </span>
                                 </div>
                             </div>
                             <div class="field">
@@ -40,8 +40,8 @@
                                 <div class="control has-icons-left">
                                     <input class="input" type="text" placeholder="Name" v-model="description">
                                     <span class="icon is-left">
-                            <i class="fa fa-user"></i>
-                        </span>
+                                        <i class="fa fa-user"></i>
+                                    </span>
                                 </div>
                             </div>
                             <div class="field">
@@ -49,8 +49,8 @@
                                 <div class="control has-icons-left">
                                     <input class="input" type="text" placeholder="Name" v-model="iotIP">
                                     <span class="icon is-left">
-                        <i class="fa fa-user"></i>
-                    </span>
+                                        <i class="fa fa-user"></i>
+                                    </span>
                                 </div>
                             </div>
                             <div class="field">
@@ -58,12 +58,12 @@
                                 <div class="control has-icons-left">
                                     <input class="input" type="text" placeholder="Name" v-model="serialNo">
                                     <span class="icon is-left">
-                            <i class="fa fa-user"></i>
-                        </span>
+                                        <i class="fa fa-user"></i>
+                                    </span>
                                 </div>
                             </div>
                             <br><br>
-                            <div class="mid">
+                            <div class="buttons">
                                 <button @click="closeModal" class="button">Cancel</button>
                                 <button class="button is-primary" @click="addDevice">Sign Up</button>
                             </div>
