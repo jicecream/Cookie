@@ -1,11 +1,17 @@
 <template>
     <div class="deleteDevice">
-        <div class="columns" v-if="isShowing">
-            <div class="column">
-                <p>Are you sure you want to delete this device?</p>
-                <button class="button" @click="closeModal">No</button>
-                <button class="button has-background-danger has-text-white" @click="deleteDevice">Yes</button>
+        <div class="modal is-active">
+            <div class="modal-background" @click="closeModal"></div>
+            <div class="modal-content has-background-white is-black padding">
+                <div class="columns">
+                    <div class="column">
+                        <p>Are you sure you want to delete this device?</p>
+                        <button class="button" @click="closeModal">No</button>
+                        <button class="button has-background-danger has-text-white" @click="deleteDevice">Yes</button>
+                    </div>
+                </div>
             </div>
+            <button class="modal-close is-large" aria-label="close"></button>
         </div>
     </div>
 </template>
@@ -28,15 +34,14 @@
         @Prop()
         isShowing: boolean
 
-
         deleteDevice() {
             IotService.deleteIot(this.id)
                 .then(res => this.processSuccess())
                 .catch(e => this.toggleShowing())
         }
 
-        toggleShowing() {
-            this.$emit(DevicesEvents.TOGGLE_DELETE, !this.isShowing)
+        closeModal() {
+            this.$emit(DevicesEvents.CLOSE_DELETE_MODAL, !this.isShowing)
         }
 
         processSuccess() {
@@ -49,4 +54,7 @@
 
 <style scoped lang="scss">
 
+    .padding {
+        padding: 2em;
+    }
 </style>
