@@ -1,11 +1,15 @@
 <template>
     <div class="manageDevicesCard padding">
-        <!--This contains table with name, category, location, description, toggable button, trash icon-->
+        <add-device-modal :showing="addModalShown"
+                          @click="addDevice"
+                          @close-add-device="onAddModalShow"
+                          v-if="addModalShown"></add-device-modal>
         <div class="columns">
             <div class="column"><p class="title is-3">Manage Devices</p></div>
             <div class="column is-1"><i class="fas fa-plus-circle cursorPtr" @click="addDevice"></i></div>
         </div>
         <iot-card v-for="iot in iots" :iot="iot"></iot-card>
+
     </div>
 </template>
 
@@ -16,12 +20,14 @@
     import IotCard from "./IotCard.vue";
     import {bus} from "../../main";
     import {DevicesEvents} from "./Events";
+    import AddDeviceModal from "./AddDeviceModal.vue";
     @Component({
-        components: {IotCard}
+        components: {AddDeviceModal, IotCard}
     })
     export default class ManageDevicesCard extends Vue {
 
         iots: Array<Iot> = []
+        addModalShown = false
 
         created() {
             IotService.getIots()
@@ -30,6 +36,16 @@
 
             bus.$on(DevicesEvents.DELETED,  (id: number) =>
                 this.iots.splice(this.iots.findIndex(each => each.iotId  == id), 1))
+
+            //this.$on(DevicesEvents.CLOSE_ADD_DEVICE, (showing: boolean) => {console.log(showing)})
+        }
+
+        onAddModalShow(addModalShown: boolean) {
+            this.addModalShown = addModalShown
+        }
+
+        addDevice() {
+            this.addModalShown = true
         }
     }
 </script>

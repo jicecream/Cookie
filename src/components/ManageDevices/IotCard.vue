@@ -6,7 +6,7 @@
             <div class="column" @click="toggleDetails">{{iot.location}}</div>
             <div class="column" @click="toggleDetails">{{iot.description}}</div>
             <div class="column" @click="toggleDetails">{{dummyStatusStr}}</div>
-            <div class="column has-text-centered" @click="showDeleteModal"><i class="fas fa-trash-alt"></i></div>
+            <div class="column has-text-centered is-1" @click="showDeleteModal"><i class="fas fa-trash-alt"></i></div>
         </div>
         <div class="columns iotDetails" v-if="additionalInfoShown">
             <div class="column"><p>IP: {{iot.iotIP}}</p></div>
@@ -23,6 +23,7 @@
     import {Component, Vue} from 'vue-property-decorator'
     import {Iot} from "../../models/Iot";
     import DeleteDevice from "./DeleteDevice.vue";
+    import {DevicesEvents} from "./Events";
 
     @Component({
         components: {DeleteDevice},
@@ -35,6 +36,11 @@
         additionalInfoShown: boolean = false
         dummyStatus: boolean = false
         deleteModalShowing: boolean = false
+
+        created() {
+            this.$on(DevicesEvents.TOGGLE_DELETE,
+                (data:boolean) => this.deleteModalShowing = data)
+        }
 
         toggleDetails() {
             this.additionalInfoShown = !this.additionalInfoShown

@@ -43,7 +43,7 @@
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         color: black;
         background-color: white;
-        padding: 2em;
+        padding: 1em;
         margin-bottom: .5em;
         &:hover {
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);

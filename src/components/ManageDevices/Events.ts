@@ -1,3 +1,5 @@
 export enum DevicesEvents {
-    DELETED = 'deleted'
+    DELETED = 'deleted',
+    TOGGLE_DELETE = 'toggledelete',
+    CLOSE_ADD_DEVICE = 'close-add-device'
 }

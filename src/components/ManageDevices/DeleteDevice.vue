@@ -3,15 +3,15 @@
         <div class="columns" v-if="isShowing">
             <div class="column">
                 <p>Are you sure you want to delete this device?</p>
-                <button class="button" @click="toggleShowing">No</button>
-                <button class="button" @click="deleteDevice">Yes</button>
+                <button class="button" @click="closeModal">No</button>
+                <button class="button has-background-danger has-text-white" @click="deleteDevice">Yes</button>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator'
+    import {Component, Prop, Vue} from 'vue-property-decorator'
     import HelloWorld from '@/components/HelloWorld.vue'
     import {IotService} from "../../api/IotService";
     import {bus} from "../../main";
@@ -19,27 +19,29 @@
 
     @Component({
         components: {},
-        props: {
-            id: Number,
-            isShowing: Boolean
-        }
     })
     export default class DeleteDevice extends Vue {
 
+        @Prop()
+        id: number
+
+        @Prop()
+        isShowing: boolean
+
+
         deleteDevice() {
             IotService.deleteIot(this.id)
-                .then(res => this.processSucess())
+                .then(res => this.processSuccess())
                 .catch(e => this.toggleShowing())
         }
 
         toggleShowing() {
-            this.isShowing = !this.isShowing
+            this.$emit(DevicesEvents.TOGGLE_DELETE, !this.isShowing)
         }
 
-        processSucess() {
+        processSuccess() {
             bus.$emit(DevicesEvents.DELETED, this.id)
-            // this.toggleShowing()
-            this.isShowing = false
+            this.toggleShowing()
         }
 
     }
