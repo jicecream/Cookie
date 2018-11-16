@@ -45,18 +45,20 @@
         addModalShown = false
 
         created() {
-            IotService.getIots()
-                .then(res => this.iots = res.data.data.map((each: object) => Iot.fromJSON(each)))
-                .catch(e => console.log(e))
-
+            this.getIots()
             bus.$on(DevicesEvents.DELETED,  (id: number) =>
                 this.iots.splice(this.iots.findIndex(each => each.iotId  == id), 1))
-
-            //this.$on(DevicesEvents.CLOSE_ADD_DEVICE, (showing: boolean) => {console.log(showing)})
         }
 
         onAddModalShow(addModalShown: boolean) {
             this.addModalShown = addModalShown
+            this.getIots()
+        }
+
+        getIots() {
+            IotService.getIots()
+                .then(res => this.iots = res.data.data.map((each: object) => Iot.fromJSON(each)))
+                .catch(e => console.log(e))
         }
 
         addDevice() {

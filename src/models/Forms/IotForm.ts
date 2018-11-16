@@ -1,14 +1,12 @@
-import {Iot, IotCategory} from "@/models/Iot"
-
 export class IotForm {
     name: string
-    category: IotCategory
+    category: string
     location: string
     desc: string
     ip: string
     serialNo: string
 
-    constructor(name: string, category: IotCategory, location: string, desc: string, ip: string, serialNo: string) {
+    constructor(name: string, category: string, location: string, desc: string, ip: string, serialNo: string) {
         this.name = name
         this.category = category
         this.location = location
@@ -29,16 +27,16 @@ export class IotForm {
             && this.serialNo.length < 20
     }
 
-    toIot(userId: number, id: number = 0) {
-        return new Iot(
-            id,
-            this.ip,
-            this.name,
-            this.category,
-            this.location,
-            this.desc,
-            this.serialNo,
-            userId
-        )
-    }
+    // toIot(userId: number, id: number = 0) {
+    //     return new Iot(
+    //         id,
+    //         this.ip,
+    //         this.name,
+    //         this.category,
+    //         this.location,
+    //         this.desc,
+    //         this.serialNo,
+    //         userId
+    //     )
+    // }
 }

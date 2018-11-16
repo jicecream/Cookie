@@ -19,7 +19,7 @@
                             </div>
                             <div class="field">
                                 <label class="label">Command: </label>
-                                <span class="select">
+                                <span class="select is-fullwidth">
                                     <select v-model="command">
                                         <option value="Lights">Lights</option>
                                         <option value="Door">Door</option>
@@ -65,7 +65,7 @@
                             <br><br>
                             <div class="buttons">
                                 <button @click="closeModal" class="button">Cancel</button>
-                                <button class="button is-primary" @click="addDevice">Sign Up</button>
+                                <button class="button is-primary" @click="addDevice">Add</button>
                             </div>
                         </form>
                     </div>
@@ -81,7 +81,6 @@
     import {DevicesEvents} from "./Events";
     import {IotService} from "../../api/IotService";
     import {IotForm} from "../../models/Forms/IotForm";
-    import {IotCategory} from '../../models/Iot';
 
     @Component({})
     export default class AddDeviceModal extends Vue {
@@ -92,7 +91,6 @@
         description: string = ''
         iotIP: string = ''
         serialNo: string = ''
-        category: IotCategory
 
         closeModal() {
             this.$emit(DevicesEvents.CLOSE_ADD_DEVICE, false)
@@ -113,7 +111,7 @@
 
         get iotForm() {
             return new IotForm(this.name,
-                this.category,
+                this.command,
                 this.location,
                 this.description,
                 this.iotIP,
