@@ -22,7 +22,7 @@
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator'
     import {Iot} from "../../models/Iot";
-    import DeleteDevice from "./DeleteDevice";
+    import DeleteDevice from "./DeleteDevice.vue";
 
     @Component({
         components: {DeleteDevice},

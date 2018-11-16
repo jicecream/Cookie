@@ -3,7 +3,7 @@
         <!--This contains table with name, category, location, description, toggable button, trash icon-->
         <div class="columns">
             <div class="column"><p class="title is-3">Manage Devices</p></div>
-            <div class="column is-1"><i class="fas fa-plus-circle cursorPtr"></i></div>
+            <div class="column is-1"><i class="fas fa-plus-circle cursorPtr" @click="addDevice"></i></div>
         </div>
         <iot-card v-for="iot in iots" :iot="iot"></iot-card>
     </div>
@@ -42,6 +42,7 @@
     .fas {
         font-size: 2rem;
     }
+
     .manageDevicesCard {
         overflow-y: auto;
         overflow-x: hidden;

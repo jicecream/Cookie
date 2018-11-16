@@ -1,7 +1,7 @@
 <template>
     <div class="changePassword">
         <div class="padding">
-            <div class="title is-3">Training</div>
+            <div class="title is-3">Settings</div>
             <form class="changePasswordForm">
                 <div class="formPadding">
                     <h1 class="header">Change Password</h1>
@@ -56,7 +56,7 @@
     }
 
     .padding {
-        padding: 3%;
+        padding: 2vh;
     }
 
     .formPadding {

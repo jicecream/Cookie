@@ -56,7 +56,7 @@
                 <div class="field">
                     <label class="label">Age: </label>
                     <div class="control has-icons-left">
-                        <input class="input restrict" type="number" placeholder="Age" v-model="age">
+                        <input class="input restrict" type="number" placeholder="Age" v-model="age" min="0">
                         <span class="icon is-left">
                         <i class="fa fa-birthday-cake"></i>
                     </span>

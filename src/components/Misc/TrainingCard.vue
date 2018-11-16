@@ -20,7 +20,7 @@
                         <div class="field">
                             <label class="label">Age: </label>
                             <div class="control has-icons-left">
-                                <input class="input restrict" type="number" placeholder="Age" v-model="age">
+                                <input class="input restrict" type="number" placeholder="Age" v-model="age" min="0">
                                 <span class="icon is-left">
                                     <i class="fa fa-birthday-cake"></i>
                                 </span>
@@ -54,7 +54,7 @@
                             <div class="control has-icons-left">
                                 <input class="input" type="text" placeholder="Device" v-model="email">
                                 <span class="icon is-left">
-                                    <i class="fa fa-envelope"></i>
+                                    <i class="fa fa-mobile"></i>
                                 </span>
                                 <p class="help" v-if="!checkEmail"></p>
                             </div>
@@ -71,29 +71,39 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="column"></div>
+                </div>
+                <div class="columns">
                     <div class="column">
-
+                        <div class="bottomButtons">
+                            <div class="columns">
+                                <div class="column">
+                                    <button class="button">
+                                        <span>Record</span>
+                                        <span class="icon is-small is-warning">
+                                            <i class="icon is-right fa fa-microphone"/>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="column">
+                                    <button class="button">
+                                        <span>Playback</span>
+                                        <span class="icon is-small">
+                                            <i class="icon is-right fa fa-play"/>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="column">
+                                    <button class="button is-primary">
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="column"></div>
                 </div>
             </form>
-        </div>
-        <div class="bottomButtons">
-            <button class="button is-danger">
-                <span>Record</span>
-                <span class="icon is-small">
-                    <i class="icon is-right fa fa-microphone"/>
-                </span>
-            </button>
-            <button class="button is-warning">
-                <span>Playback</span>
-                <span class="icon is-small">
-                    <i class="icon is-right fa fa-play"/>
-                </span>
-            </button>
-            <button class="button is-success">
-                <span>Submit</span>
-            </button>
         </div>
     </div>
 </template>
@@ -114,6 +124,10 @@
         overflow-x: hidden;
         height: 100vh;
         padding: 2vh;
+    }
+
+    .red {
+        color: red;
     }
 
     .bottomButtons {
