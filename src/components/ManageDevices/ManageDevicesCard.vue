@@ -14,6 +14,8 @@
     import {IotService} from "../../api/IotService";
     import {Iot} from '../../models/Iot';
     import IotCard from "./IotCard.vue";
+    import {bus} from "../../main";
+    import {DevicesEvents} from "./Events";
     @Component({
         components: {IotCard}
     })
@@ -25,6 +27,9 @@
             IotService.getIots()
                 .then(res => this.iots = res.data.data.map((each: object) => Iot.fromJSON(each)))
                 .catch(e => console.log(e))
+
+            bus.$on(DevicesEvents.DELETED,  (id: number) =>
+                this.iots.splice(this.iots.findIndex(each => each.iotId  == id), 1))
         }
     }
 </script>
