@@ -80,7 +80,7 @@
                                 <div class="column">
                                     <button class="button">
                                         <span>Record</span>
-                                        <span class="icon is-small is-warning">
+                                        <span class="icon is-small">
                                             <i class="icon is-right fa fa-microphone"/>
                                         </span>
                                     </button>

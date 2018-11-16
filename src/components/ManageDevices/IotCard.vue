@@ -1,45 +1,44 @@
 <template>
-    <div class="iotCard materialCard cursorPtr">
-        <div class="columns">
-            <div class="column" @click="toggleDetails">{{iot.name}}</div>
-            <div class="column" @click="toggleDetails">{{iot.category}}</div>
-            <div class="column" @click="toggleDetails">{{iot.location}}</div>
-            <div class="column" @click="toggleDetails">{{iot.description}}</div>
-            <div class="column" @click="toggleDetails">{{dummyStatusStr}}</div>
-            <div class="column has-text-centered is-1" @click="showDeleteModal"><i class="fas fa-trash-alt"></i></div>
-        </div>
-        <div class="columns iotDetails" v-if="additionalInfoShown">
-            <div class="column"><p>IP: {{iot.iotIP}}</p></div>
-            <div class="column">Serial Number: {{iot.serialNo}}</div>
-            <div class="column">Created At: {{iot.createdAt}}</div>
-            <div class="column"></div> <!-- madhacks dont remove -->
-            <div class="column"></div> <!-- madhacks dont remove -->
-        </div>
+    <tr class="iotCard cursorPtr">
+        <td @click="toggleDetails">{{iot.name}}</td>
+        <td @click="toggleDetails">{{iot.category}}</td>
+        <td @click="toggleDetails">{{iot.location}}</td>
+        <td @click="toggleDetails">{{iot.description}}</td>
+        <td @click="toggleDetails">{{dummyStatusStr}}</td>
+        <td><p>{{iot.iotIP}}</p></td>
+        <td>{{iot.serialNo}}</td>
+        <td>{{humanDate}}</td>
+        <td @click="showEditModal"><i class="fas fa-edit"></i></td>
+        <td @click="showDeleteModal"><i class="fas fa-trash-alt"></i></td>
         <delete-device :id="iot.iotId" :is-showing="deleteModalShowing"></delete-device>
-    </div>
+    </tr>
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from 'vue-property-decorator'
+    import {Component, Prop, Vue} from 'vue-property-decorator'
     import {Iot} from "../../models/Iot";
     import DeleteDevice from "./DeleteDevice.vue";
     import {DevicesEvents} from "./Events";
 
     @Component({
-        components: {DeleteDevice},
-        props: {
-            iot: Iot
-        }
+        components: {DeleteDevice}
     })
     export default class IotCard extends Vue {
 
-        additionalInfoShown: boolean = false
+        @Prop()
+        iot: Iot
+
+        additionalInfoShown: boolean = false;
         dummyStatus: boolean = false
         deleteModalShowing: boolean = false
 
         created() {
             this.$on(DevicesEvents.TOGGLE_DELETE,
                 (data:boolean) => this.deleteModalShowing = data)
+        }
+
+        showEditModal() {
+
         }
 
         toggleDetails() {
@@ -53,12 +52,17 @@
         get dummyStatusStr() {
             return this.dummyStatus ? 'OFF' : 'ON'
         }
+
+        get humanDate() {
+            const date = new Date(this.iot.createdAt)
+            return `${date.toLocaleDateString('en-SG')} ${date.toLocaleTimeString('en-SG')}`;
+        }
     }
 </script>
 
 <style scoped lang="scss">
     .iotCard {
-        border-radius: 1vw;
+        /*border-radius: 1vw;*/
     }
 
     .iotDetails {

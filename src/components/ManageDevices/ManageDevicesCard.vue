@@ -8,8 +8,23 @@
             <div class="column"><p class="title is-3">Manage Devices</p></div>
             <div class="column is-1"><i class="fas fa-plus-circle cursorPtr" @click="addDevice"></i></div>
         </div>
-        <iot-card v-for="iot in iots" :iot="iot"></iot-card>
-
+        <table class="table is-striped">
+            <tr>
+                <th>IOT Name</th>
+                <th>Category</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>IP Address</th>
+                <th>Serial Number</th>
+                <th>Created At</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tbody>
+            <iot-card v-for="iot in iots" :iot="iot"></iot-card>
+            </tbody>
+        </table>
     </div>
 </template>
 
