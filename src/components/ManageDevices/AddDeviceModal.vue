@@ -79,6 +79,9 @@
 <script lang="ts">
     import {Component, Prop, Vue} from 'vue-property-decorator'
     import {DevicesEvents} from "./Events";
+    import {IotService} from "../../api/IotService";
+    import {IotForm} from "../../models/Forms/IotForm";
+    import {IotCategory} from '../../models/Iot';
 
     @Component({})
     export default class AddDeviceModal extends Vue {
@@ -89,17 +92,32 @@
         description: string = ''
         iotIP: string = ''
         serialNo: string = ''
-
-        created() {
-
-        }
+        category: IotCategory
 
         closeModal() {
             this.$emit(DevicesEvents.CLOSE_ADD_DEVICE, false)
         }
 
         addDevice() {
+            if(this.iotForm.isValid) {
+                IotService.createIot(this.iotForm)
+                    .then(res => this.closeModal())
+                    .catch(e => {
+                        console.log(e)
+                        this.closeModal()
+                    })
+            } else {
+                // TODO
+            }
+        }
 
+        get iotForm() {
+            return new IotForm(this.name,
+                this.category,
+                this.location,
+                this.description,
+                this.iotIP,
+                this.serialNo)
         }
 
     }
