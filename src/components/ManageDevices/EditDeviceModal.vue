@@ -2,7 +2,7 @@
     <div class="manageDevicesModal">
         <div class="modal is-active">
             <div class="modal-background" @click="closeModal"></div>
-            <div class="modal-content">
+            <div class="modal-content animated slideInUp">
                 <div class="has-background-white padding">
                     <h1 class="title is-2 mid">Edit device</h1>
                     <h3 class="subtitle mid">Please complete to add you IOT device</h3>

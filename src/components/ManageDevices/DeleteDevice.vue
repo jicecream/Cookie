@@ -2,7 +2,7 @@
     <div class="deleteDevice">
         <div class="modal is-active">
             <div class="modal-background" @click="closeModal"></div>
-            <div class="modal-content has-background-white is-black padding">
+            <div class="modal-content has-background-white is-black padding animated slideInUp">
                 <div class="columns">
                     <div class="column">
                         <p class="title is-2"><i class="fa fa-warning"></i> Delete Device <i class="fa fa-warning"></i>
