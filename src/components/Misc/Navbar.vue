@@ -4,13 +4,13 @@
             <div class="menu-label white header">KONTOROL</div>
             <ul class="menu-list">
                 <li v-for="link in links">
-                    <a @click="navigate(link.to)" class="white">
-                        <i class="icon is-left" :class="link.icons"></i> {{link.str}}
+                    <a @click="navigate(link.to)" class="white navbar-text">
+                        <i class="icon is-left" :class="link.icons"></i>{{link.str}}
                     </a>
                 </li>
                 <li>
-                    <a @click="logout" class="white">
-                        <i class="fas fa-sign-out-alt"></i> Logout
+                    <a @click="logout" class="white navbar-text">
+                        <i class="icon is-left fas fa-sign-out-alt"></i>Logout
                     </a>
                 </li>
             </ul>
@@ -68,5 +68,13 @@
 
     .menu {
         color: white;
+    }
+
+    .navbar-text {
+        font-size: 1.2rem;
+    }
+
+    .fas {
+        margin-right: 2em;
     }
 </style>
