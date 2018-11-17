@@ -41,7 +41,7 @@
                         <div class="field">
                             <label class="label">Location: </label>
                             <div class="control has-icons-left">
-                                <input class="input" type="text" placeholder="Location" v-model="email">
+                                <input class="input" type="text" placeholder="Location" v-model="location">
                                 <span class="icon is-left">
                                     <i class="fa fa-map-marker"></i>
                                 </span>
@@ -52,7 +52,7 @@
                         <div class="field">
                             <label class="label">Device: </label>
                             <div class="control has-icons-left">
-                                <input class="input" type="text" placeholder="Device" v-model="email">
+                                <input class="input" type="text" placeholder="Device" v-model="device">
                                 <span class="icon is-left">
                                     <i class="fa fa-mobile"></i>
                                 </span>
@@ -63,7 +63,7 @@
                         <div class="field">
                             <label class="label">Channel: </label>
                             <div class="control has-icons-left">
-                                <input class="input" type="text" placeholder="Channel" v-model="email">
+                                <input class="input" type="text" placeholder="Channel" v-model="channel">
                                 <span class="icon is-left">
                                     <i class="fa fa-microphone"></i>
                                 </span>
@@ -80,7 +80,7 @@
                                 <div class="column">
                                     <button class="button">
                                         <span>Record</span>
-                                        <span class="icon is-small">
+                                        <span class="icon is-small red">
                                             <i class="icon is-right fa fa-microphone"/>
                                         </span>
                                     </button>
@@ -88,7 +88,7 @@
                                 <div class="column">
                                     <button class="button">
                                         <span>Playback</span>
-                                        <span class="icon is-small">
+                                        <span class="icon is-small orange">
                                             <i class="icon is-right fa fa-play"/>
                                         </span>
                                     </button>
@@ -128,6 +128,10 @@
 
     .red {
         color: red;
+    }
+
+    .orange {
+        color: orange;
     }
 
     .bottomButtons {

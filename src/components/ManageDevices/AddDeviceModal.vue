@@ -18,7 +18,7 @@
                                 </div>
                             </div>
                             <div class="field">
-                                <label class="label">Command: </label>
+                                <label class="label">Category: </label>
                                 <span class="select is-fullwidth">
                                     <select v-model="command">
                                         <option value="Lights">Lights</option>

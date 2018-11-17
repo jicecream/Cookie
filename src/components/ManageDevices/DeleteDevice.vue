@@ -5,9 +5,15 @@
             <div class="modal-content has-background-white is-black padding">
                 <div class="columns">
                     <div class="column">
-                        <p>Are you sure you want to delete this device?</p>
-                        <button class="button" @click="closeModal">No</button>
-                        <button class="button has-background-danger has-text-white" @click="deleteDevice">Yes</button>
+                        <p class="title is-2"><i class="fa fa-warning"></i> Delete Device <i class="fa fa-warning"></i>
+                        </p>
+                        <p class="bigbigfont">Deleting this device will delete it <b>forever</b>! Are you sure you want
+                            to delete this device?</p>
+                        <br><br>
+                        <button class="button closeButton" @click="closeModal">No</button>
+                        <button class="button deleteButton has-background-danger has-text-white" @click="deleteDevice">
+                            Yes
+                        </button>
                     </div>
                 </div>
             </div>
@@ -56,5 +62,9 @@
 
     .padding {
         padding: 2em;
+    }
+
+    .bigbigfont {
+        font-size: 1.1em;
     }
 </style>

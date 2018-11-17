@@ -7,7 +7,7 @@
             <div class="column"><p class="title is-3">Manage Devices</p></div>
             <div class="column is-1"><i class="fas fa-plus-circle cursorPtr" @click="addDevice"></i></div>
         </div>
-        <table class="table is-striped">
+        <table class="table is-striped is-hoverable is-fullwidth">
             <tr>
                 <th>IOT Name</th>
                 <th>Category</th>
