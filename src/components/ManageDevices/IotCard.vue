@@ -15,6 +15,10 @@
                        v-if="deleteModalShowing"
                        @close-delete-modal="onCloseDeleteModal"
         ></delete-device>
+        <edit-device-modal :iot="iot"
+                           :is-showing="editModalShowing"
+                           @close-edit-device="onCloseEditModal"
+                           v-if="editModalShowing"></edit-device-modal>
     </tr>
 </template>
 
@@ -23,24 +27,31 @@
     import {Iot} from "../../models/Iot";
     import DeleteDevice from "./DeleteDevice.vue";
     import {DevicesEvents} from "./Events";
+    import EditDeviceModal from "./EditDeviceModal.vue";
 
     @Component({
-        components: {DeleteDevice}
+        components: {EditDeviceModal, DeleteDevice}
     })
     export default class IotCard extends Vue {
 
         @Prop()
         iot: Iot
 
+        editModalShowing: boolean = false
         dummyStatus: boolean = false
         deleteModalShowing: boolean = false
+
         
         showEditModal() {
-
+            this.editModalShowing = !this.editModalShowing
         }
 
         onCloseDeleteModal(deleteModalShowing: boolean) {
             this.deleteModalShowing = deleteModalShowing
+        }
+
+        onCloseEditModal(editModalShowing: boolean) {
+            this.editModalShowing = editModalShowing
         }
 
         showDeleteModal() {

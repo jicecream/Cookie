@@ -1,7 +1,6 @@
 <template>
     <div class="manageDevicesCard padding">
-        <add-device-modal :showing="addModalShown"
-                          @click="addDevice"
+        <add-device-modal @click="addDevice"
                           @close-add-device="onAddModalShow"
                           v-if="addModalShown"></add-device-modal>
         <div class="columns">

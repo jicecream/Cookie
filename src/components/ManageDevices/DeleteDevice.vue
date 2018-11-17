@@ -37,7 +37,7 @@
         deleteDevice() {
             IotService.deleteIot(this.id)
                 .then(res => this.processSuccess())
-                .catch(e => this.toggleShowing())
+                .catch(e => this.closeModal())
         }
 
         closeModal() {
@@ -46,7 +46,7 @@
 
         processSuccess() {
             bus.$emit(DevicesEvents.DELETED, this.id)
-            this.toggleShowing()
+            this.closeModal()
         }
 
     }

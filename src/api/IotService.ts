@@ -23,8 +23,8 @@ function createIot(iot: IotForm) {
     return axios.post(`/${route}`, JSON.parse(JSON.stringify(iot)), config())
 }
 
-function updateIot(iot: IotForm) {
-    return axios.put(`/${route}`, JSON.parse(JSON.stringify(iot)), config())
+function updateIot(iot: IotForm, id: number) {
+    return axios.put(`/${route}/${id}`, JSON.parse(JSON.stringify(iot)), config())
 }
 
 function deleteIot(id: number) {
