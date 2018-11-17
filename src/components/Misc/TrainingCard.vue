@@ -74,30 +74,177 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="column"></div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <div class="buttons">
-                            <button class="button">
-                                <span>Record</span>
-                                <span class="icon is-small red">
+                        <br>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="buttons">
+                                    <button class="button">
+                                        <span>Record</span>
+                                        <span class="icon is-small red">
                                     <i class="icon is-right fa fa-microphone"/>
                                 </span>
-                            </button>
-                            <button class="button">
-                                <span>Playback</span>
-                                <span class="icon is-small orange">
+                                    </button>
+                                    <button class="button">
+                                        <span>Playback</span>
+                                        <span class="icon is-small orange">
                                     <i class="icon is-right fa fa-play"/>
                                 </span>
-                            </button>
-                            <button class="button is-primary">
-                                <span>Submit</span>
-                            </button>
+                                    </button>
+                                    <button class="button is-primary">
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="column"></div>
+                    <div class="column">
+                        <!--mad hacks column, repurposed to a view training history list-->
+                        <div class="historyColumn padding">
+                            <p class="title is-5">Training History</p>
+                            <table class="table is-hoverable is-striped is-fullwidth is-scrollable">
+                                <tr>
+                                    <th>Voice File Name</th>
+                                    <th>Playback</th>
+                                </tr>
+                                <!--where each voice file is generated for each file belonging to user-->
+                                <tbody>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+                                <tr>
+                                    <td>file 1</td>
+                                    <td>playback button</td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
@@ -131,7 +278,20 @@
         color: orange;
     }
 
-    .bottomButtons {
-
+    .historyColumn {
+        height: 100%;
     }
+
+    .padding {
+        padding: 0.5em;
+    }
+
+    /*overflow-y: scroll;*/
+    /*width: auto;*/
+    /*position: absolute;*/
+    .is-scrollable {
+        overflow-y: scroll;
+        width: 100%
+    }
+
 </style>
