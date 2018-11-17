@@ -11,6 +11,7 @@
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
     "bulma": "^0.7.2",
+    "bulma-badge": "^2.0.0",
     "chart.js": "^2.7.3",
     "particlesjs": "^2.2.3",
     "vue": "^2.5.17",

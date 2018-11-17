@@ -10,9 +10,9 @@
                         <div class="field">
                             <label class="label">Command: </label>
                             <span class="select">
-                                <select>
-                                    <option>Turn on the Lights</option>
-                                    <option>Please turn on the Lights</option>
+                                <select v-model="command">
+                                    <option value="turnOn">Turn on the Lights</option>
+                                    <option value="pleaseTurnOn">Please turn on the Lights</option>
                                 </select>
                             </span>
                         </div>
@@ -61,13 +61,17 @@
                         </div>
 
                         <div class="field">
-                            <label class="label">Channel: </label>
-                            <div class="control has-icons-left">
-                                <input class="input" type="text" placeholder="Channel" v-model="channel">
-                                <span class="icon is-left">
-                                    <i class="fa fa-microphone"></i>
-                                </span>
-                                <p class="help" v-if="!checkEmail"></p>
+                            <label class="label tooltip is-tooltip-right" data-tooltip="Tekokokokxt">Channel: </label>
+                            <div class="control">
+                                <label class="radio">
+                                    <input type="radio" name="gender" value="0" v-model="channel"> Left
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="gender" value="1" v-model="channel"> Middle
+                                </label>
+                                <label class="radio">
+                                    <input type="radio" name="gender" value="2" v-model="channel"> Right
+                                </label>
                             </div>
                         </div>
                     </div>
@@ -75,30 +79,22 @@
                 </div>
                 <div class="columns">
                     <div class="column">
-                        <div class="bottomButtons">
-                            <div class="columns">
-                                <div class="column">
-                                    <button class="button">
-                                        <span>Record</span>
-                                        <span class="icon is-small red">
-                                            <i class="icon is-right fa fa-microphone"/>
-                                        </span>
-                                    </button>
-                                </div>
-                                <div class="column">
-                                    <button class="button">
-                                        <span>Playback</span>
-                                        <span class="icon is-small orange">
-                                            <i class="icon is-right fa fa-play"/>
-                                        </span>
-                                    </button>
-                                </div>
-                                <div class="column">
-                                    <button class="button is-primary">
-                                        <span>Submit</span>
-                                    </button>
-                                </div>
-                            </div>
+                        <div class="buttons">
+                            <button class="button">
+                                <span>Record</span>
+                                <span class="icon is-small red">
+                                    <i class="icon is-right fa fa-microphone"/>
+                                </span>
+                            </button>
+                            <button class="button">
+                                <span>Playback</span>
+                                <span class="icon is-small orange">
+                                    <i class="icon is-right fa fa-play"/>
+                                </span>
+                            </button>
+                            <button class="button is-primary">
+                                <span>Submit</span>
+                            </button>
                         </div>
                     </div>
                     <div class="column"></div>
@@ -113,6 +109,7 @@
 
     @Component
     export default class TrainingCard extends Vue {
+        command: string = 'turnOn'
 
     }
 </script>
