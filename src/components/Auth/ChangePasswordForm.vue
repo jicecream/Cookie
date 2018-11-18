@@ -52,7 +52,7 @@
 
 <style lang="scss" scoped>
     .changePassword {
-        height: 100vh;
+        height: 98vh;
     }
 
     .padding {

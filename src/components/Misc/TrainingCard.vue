@@ -99,15 +99,15 @@
                     </div>
                     <div class="column">
                         <!--mad hacks column, repurposed to a view training history list-->
-                        <div class="historyColumn padding">
-                            <p class="title is-5">Training History</p>
-                            <table class="table is-hoverable is-striped is-fullwidth is-scrollable">
+                        <p class="title is-5">Training History</p>
+                        <div class="historyColumn padding is-scrollable">
+                            <table class="table is-hoverable is-striped is-fullwidth">
                                 <tr>
                                     <th>Voice File Name</th>
                                     <th>Playback</th>
                                 </tr>
                                 <!--where each voice file is generated for each file belonging to user-->
-                                <tbody>
+                                <tbody class="is-scrollable">
                                 <tr>
                                     <td>file 1</td>
                                     <td>playback button</td>
@@ -200,47 +200,6 @@
                                     <td>file 1</td>
                                     <td>playback button</td>
                                 </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-                                <tr>
-                                    <td>file 1</td>
-                                    <td>playback button</td>
-                                </tr>
-
                                 </tbody>
                             </table>
                         </div>
@@ -266,7 +225,7 @@
     .trainingCard {
         overflow-y: auto;
         overflow-x: hidden;
-        height: 100vh;
+        height: 98vh;
         padding: 2vh;
     }
 
@@ -286,12 +245,10 @@
         padding: 0.5em;
     }
 
-    /*overflow-y: scroll;*/
-    /*width: auto;*/
-    /*position: absolute;*/
     .is-scrollable {
-        overflow-y: scroll;
-        width: 100%
+        overflow-y: auto;
+        width: 100%;
+        max-height: 80vh;
     }
 
 </style>

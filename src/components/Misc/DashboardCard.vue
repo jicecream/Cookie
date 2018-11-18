@@ -81,7 +81,7 @@
     .dashboardCard {
         overflow-y: auto;
         overflow-x: hidden;
-        height: 100vh;
+        height: 94vh;
     }
 
     .red {
