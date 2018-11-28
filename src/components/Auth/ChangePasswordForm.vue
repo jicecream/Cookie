@@ -44,7 +44,7 @@
         newPassword: string = ``
         confirmPassword: string = ``
 
-        changepassword() {
+        ChangePassword() {
             router.push('/')
         }
     }

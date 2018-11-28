@@ -7,13 +7,18 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@babel/core": "^7.0.0",
     "@fortawesome/fontawesome-free": "^5.5.0",
+    "ajv": "^6.0.0",
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
     "bulma": "^0.7.2",
     "bulma-badge": "^2.0.0",
     "chart.js": "^2.7.3",
+    "hchs-vue-charts": "^1.2.8",
+    "particles.js": "^2.0.0",
     "particlesjs": "^2.2.3",
+    "validate-typescript": "^3.0.0",
     "vue": "^2.5.17",
     "vue-chartjs": "^3.4.0",
     "vue-class-component": "^6.0.0",
@@ -23,12 +28,14 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@types/node": "^10.12.10",
     "@vue/cli-plugin-babel": "^3.0.5",
     "@vue/cli-plugin-typescript": "^3.0.5",
     "@vue/cli-service": "^3.0.5",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.0.1",
     "typescript": "^3.0.0",
+    "vue-particles": "^1.0.9",
     "vue-template-compiler": "^2.5.17"
   }
 }

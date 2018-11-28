@@ -22,6 +22,7 @@
                     <div class="title is-6">
                         Humidity
                     </div>
+
                     <div class="data">
                         38%
                     </div>
@@ -31,6 +32,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="column lightstatus">
                 <div class="content">
                     <div class="title is-6">
@@ -51,10 +53,13 @@
                     <div class="title-is6">
                         Temperature Trends
                     </div>
-                    <!--<div class="chart">-->
-                    <!--chart goes here-->
-                    <!--</div>-->
-                </div>
+
+                <div class="chart">
+                    chart goes here
+                    <canvas id="myChart"></canvas>
+                    </div>
+
+            </div>
             </div>
         </div>
         <div class="columns">
@@ -75,9 +80,14 @@
 
     }
 
+
 </script>
 
 <style lang="scss" scoped>
+
+
+
+
     .dashboardCard {
         overflow-y: auto;
         overflow-x: hidden;

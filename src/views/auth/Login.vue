@@ -3,11 +3,17 @@
         <div class="columns page">
             <div class="column is-half is-paddingless">
                 <ParticlesBG></ParticlesBG>
+
+
             </div>
 
             <div class="kms">
                 <div class="column">
                     <LoginCard></LoginCard>
+                    <particlesJS></particlesJS>
+
+
+
                 </div>
 
             </div>
@@ -19,9 +25,9 @@
     import {Component, Vue} from 'vue-property-decorator'
     import LoginCard from "../../components/Auth/LoginCard.vue"
     import ParticlesBG from "../../components/Misc/ParticlesBG.vue"
-
+    import ParticlesJS from "../../components/Misc/ParticlesJS.vue"
     @Component({
-        components: {LoginCard, ParticlesBG}
+        components: {LoginCard, ParticlesBG, ParticlesJS}
     })
 
     export default class Login extends Vue {
